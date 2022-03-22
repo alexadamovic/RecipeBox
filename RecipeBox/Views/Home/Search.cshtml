@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RecipeBox.Models;
+@model List<Recipe>;
+
+<ul>
+@foreach (Recipe recipe in @Model)
+{
+  <li>@recipe.RecipeName</li>
+}
+</ul>

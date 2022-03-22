@@ -1,0 +1,50 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RecipeBox.Models;
+@model RecipeBox.Models.RecipeBoxContext
+
+<div class="row text-center">
+  <div class="col-8">
+    <h1>Recipes</h1>
+
+    @if (@Model.Recipes.ToList().Count == 0)
+    {
+      <h3>No recipes have been added yet!</h3>
+    }
+
+    @foreach (Recipe recipe in @Model.Recipes.ToList())
+    {
+      <li>@Html.ActionLink($"{recipe.RecipeName}", "Details", "Recipes", new { id = recipe.RecipeId })</li>
+    }
+
+    <h5>@Html.ActionLink("Add new recipe", "Create", "Recipes")</h5>
+  </div>
+
+  <div class="col-4">
+    <h1>Tags</h1>
+
+    @if (@Model.Tags.ToList().Count == 0)
+    {
+      <h3>No tags have been added yet!</h3>
+    }
+
+    @foreach (Tag tag in @Model.Tags.ToList())
+    {
+      <li>@Html.ActionLink($"{tag.TagName}", "Details", "Tags", new { id = tag.TagId })</li>
+    }
+
+    <h5>@Html.ActionLink("Add new tag", "Create", "Tags")</h5>
+  </div>
+</div>
+<div class="row text-center">
+  <h4>Search Recipes By Ingredient</h4>
+  <p><i>(must be an exact match)</i></p>
+
+  @using (Html.BeginForm())
+  {
+    <input type="text" name="search" />
+    <input type="submit" value="Search" />
+  }
+</div>

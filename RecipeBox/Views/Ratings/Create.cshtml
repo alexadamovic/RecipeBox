@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Rating
+
+<h4>DEVELOPERS ONLY: Add a rating to the system</h4>
+@using (Html.BeginForm())
+{
+  @Html.Label("Add a Star Rating")
+  @Html.TextBoxFor(model => model.Stars)
+  <input type="submit" value="Add new recipe!" />
+}
