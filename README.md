@@ -74,7 +74,8 @@ _This C# web application, made to be used as a Recipe management tool for Recipe
 _MIT License_
 
 Copyright (c) _2022_ _Alex Adamovic_
+Copyright (c) _2022_ _William Jameson_ 
 
 ## Contact Information
 
-alexanderadamovic@gmail.com
+alexanderadamovic@gmail.com | williamjameson90@gmail.com
