@@ -6,8 +6,8 @@
 @model RecipeBox.Models.RecipeBoxContext
 
 <div class="row text-center">
-  <div class="col-8">
-    <h1>Recipes</h1>
+  <div class="col-9 recipe-container">
+    <h2>Recipes</h2>
 
     @if (@Model.Recipes.ToList().Count == 0)
     {
@@ -22,8 +22,8 @@
     <h5>@Html.ActionLink("Add new recipe", "Create", "Recipes")</h5>
   </div>
 
-  <div class="col-4">
-    <h1>Tags</h1>
+  <div class="col-2 tag-box">
+    <h2>Tags</h2>
 
     @if (@Model.Tags.ToList().Count == 0)
     {
