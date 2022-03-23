@@ -1,5 +1,7 @@
 # RecipeBox: Many-To-Many Database Relationships
 
+![image](/RecipeBox/wwwroot/img/Logo.png)
+
 #### A C# application built with ASP.NET Core, Entity to integrate MySQL databases, and Identity for authentication/authorization
 
 #### By Alex Adamovic & William Jameson
