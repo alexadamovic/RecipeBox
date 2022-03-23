@@ -69,7 +69,7 @@ _This C# web application, made to be used as a Recipe management tool for Recipe
 
 ## Known Bugs
 
-* 
+* _None_
 
 ## License
 
