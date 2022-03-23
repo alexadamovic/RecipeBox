@@ -40,11 +40,10 @@
 </div>
 <div class="text-center search-box">
   <h4>Search Recipes By Ingredient</h4>
-  <p><i>(must be an exact match)</i></p>
 
   @using (Html.BeginForm())
   {
-    <input type="text" name="search" />
-    <input type="submit" value="Search" />
+    <input type="text" name="search" required />
+    <input type="submit" value="Search" class="btn btn-outline-dark" />
   }
 </div>

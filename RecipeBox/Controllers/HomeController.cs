@@ -31,29 +31,15 @@ namespace RecipeBox.Controllers
     [HttpPost("/")]
     public ActionResult Search(string search)
     {
-      List<Recipe> model = new List<Recipe>();
-      var RecipeList = _db.Recipes.ToList();
-      string word = search;
-      // string pattern = @"\b\w+\b";
-      // Regex rgx = new Regex(pattern);
-      // string sentence = search;
+      string searchLower = search.ToLower();
+      List<Recipe> model = _db.Recipes.Where(recipe => recipe.Ingredients.ToLower().Contains(searchLower)).ToList();
+        return View(model);
+    }
 
-      // foreach (Match match in rgx.Matches(sentence))
-      //    Console.WriteLine("Found '{0}' at position {1}", 
-      //                      match.Value, match.Index);
-
-      foreach (Recipe recipe in RecipeList)
-      {
-        if (recipe.Ingredients.Contains(word))
-        {
-          model.Add(recipe);
-        }
-      }
+    public ActionResult DisplayRating()
+    {
+      List<Recipe> model = _db.Recipes.Where(recipe => recipe.RatingId >= 4).ToList();
       return View(model);
-      
-      // var thisRecipe = _db.Recipes.FirstOrDefault(recipe => String.Contains(recipe.Ingredients, search));
-
-      // List<Recipe> MatchingRecipes = _db.Recipes.FindAllThatMatch(recipe => String.Contains(recipe.Ingredients, search));
     }
   }
 }

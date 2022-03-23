@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RecipeBox.Models;
+@model List<Recipe>;
+
+<h2>Highest Rated Recipes</h2>
+
+<h3></h3>
+@if (@Model.Count == 0)
+{
+  <h3>No highly rated recipes!</h3>
+}
+
+@foreach (Recipe recipe in @Model)
+{
+  <li>@Html.ActionLink($"{recipe.RecipeName} : {recipe.RatingId}", "Details", "Recipes", new { id = recipe.RecipeId })</li>
+}
+</ul>

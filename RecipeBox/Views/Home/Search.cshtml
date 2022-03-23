@@ -5,9 +5,15 @@
 @using RecipeBox.Models;
 @model List<Recipe>;
 
+<h2>Search Results:</h2>
+@if (@Model.Count == 0)
+{
+  <h3>Your search did not return any results</h3>
+}
+
 <ul>
 @foreach (Recipe recipe in @Model)
 {
-  <li>@recipe.RecipeName</li>
+  <li>@Html.ActionLink($"{recipe.RecipeName}", "Details", "Recipes", new { id = recipe.RecipeId })</li>
 }
 </ul>
