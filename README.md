@@ -37,7 +37,7 @@ _This C# web application, made to be used as a Recipe management tool for Recipe
 
 #### To Set Up Project With Dependencies
 
-* _clone repository from https://github.com/wcjameson/RecipeBox
+* _clone repository from https://github.com/wcjameson/RecipeBox_
 * _navigate to the project directory in your terminal/command line_
 * _navigate to the subdirectory Factory and enter ```dotnet restore``` to install project dependencies_
 
