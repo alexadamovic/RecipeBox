@@ -39,11 +39,11 @@ _This C# web application, made to be used as a Recipe management tool for Recipe
 
 * _clone repository from https://github.com/wcjameson/RecipeBox_
 * _navigate to the project directory in your terminal/command line_
-* _navigate to the subdirectory Factory and enter ```dotnet restore``` to install project dependencies_
+* _navigate to the subdirectory RecipeBox and enter ```dotnet restore``` to install project dependencies_
 
 #### To Create appsettings.json
 
-* _navigate to the subdirectory Factory and create the file ```appsettings.json```_
+* _navigate to the subdirectory RecipeBox and create the file ```appsettings.json```_
 * _add the following code:_
 ```
 {
@@ -57,12 +57,12 @@ _This C# web application, made to be used as a Recipe management tool for Recipe
 #### To Create Database using Migrations
 
 * _navigate to the project directory in your terminal/command line_
-* _navigate to the subdirectory Factory and enter ```dotnet ef database update``` to create a new local database for the project_
+* _navigate to the subdirectory RecipeBox and enter ```dotnet ef database update``` to create a new local database for the project_
 * _the database will take the name specified in your ```appsettings.json``` file and can be viewed using MySQL_
 
 #### To Run the Web Application
 
-* _navigate to the subdirectory Factory and enter ```dotnet run``` for a snapshot server or ```dotnet watch run``` for a live updating server for the application_
+* _navigate to the subdirectory RecipeBox and enter ```dotnet run``` for a snapshot server or ```dotnet watch run``` for a live updating server for the application_
 * _access the server in your browser by entering ```localhost:5000``` into your navigation bar_
 * _click the hyperlinks and submit forms to navigate between the views_
 * _enter ```ctrl``` + ```c``` for Windows or ```command``` + ```.``` for Mac in your terminal/command line to stop the server_
